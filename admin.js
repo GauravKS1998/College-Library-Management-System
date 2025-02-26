@@ -37,3 +37,9 @@ issue_books.addEventListener("click", () => {
 book_issue_status.addEventListener("click", () => {
     window.location.href = "./book_issue_status/book_issue_status.html";
 });
+collect_books.addEventListener("click", () => {
+    window.location.href = "./collected_books/collect_books.html";
+});
+collected_book_status.addEventListener("click", () => {
+    window.location.href = "./collected_books/collected_book_status.html";
+});

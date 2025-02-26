@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    height: 12vh;
+    display: grid;
+    grid-template-columns: 20% 50% 20%;
+    justify-content: space-around;
+    align-content: center;
+    box-shadow: 5px 5px 10px gray;
+}
+nav div {
+    display: grid;
+}
+nav img {
+    width: 25%;
+    justify-self: center;
+    filter: drop-shadow(5px 5px 10px gray);
+}
+nav button {
+    place-self: center;
+    padding: 12px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 120%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    color: white;
+    background-color: crimson;
+    border-radius: 10px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 80%;
+    grid-template-rows: 15vh max-content;
+    place-content: center;
+    position: relative;
+}
+#search_bar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 10%;
+    place-content: center;
+    gap: 15px;
+}
+#search_bar input {
+    width: 100%;
+    height: 6vh;
+    outline: none;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+#searchBtn {
+    width: 100%;
+    background-color: crimson;
+    color: white;
+    font-size: 110%;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.2s ease;
+    text-shadow: 0px 0px 10px black;
+}
+#searchBtn:active {
+    transform: scale(0.9);
+}
+#book_shelf {
+    padding: 5vh 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    justify-content: space-between;
+    align-content: center;
+    gap: 5vh;
+}
+.books {
+    width: 100%;
+    height: max-content;
+    box-shadow: 5px 5px 10px gray;
+    display: grid;
+    gap: 3vh;
+    border-radius: 20px;
+    overflow: hidden;
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+.books img {
+    width: 100%;
+}
+.books div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5vh;
+    padding-bottom: 3vh;
+    box-sizing: border-box;
+}
+
+.collect_btn {
+    height: 5vh;
+    background-color: crimson;
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+.collect_btn:hover {
+    background-color: maroon;
+}
+
+#collect_book_form {
+    width: 400px;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 80%;
+    gap: 3vh;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px gray;
+    top: 30vh;
+    position: fixed;
+    z-index: 99;
+    justify-self: center;
+    place-content: center;
+    text-align: center;
+}
+#collect_book_form h2 {
+    font-size: 220%;
+}
+#collect_book_form input {
+    width: 100%;
+    height: 5vh;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    color: black;
+    font-size: 90%;
+    box-sizing: border-box;
+}
+#collect_book_form input:disabled {
+    color: black;
+    background-color: white;
+}
+#collect_book_form button {
+    height: 5vh;
+    background-color: crimson;
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+#collect_book_form i {
+    position: absolute;
+    right: 5%;
+    top: 7%;
+    font-size: 150%;
+    cursor: pointer;
+}

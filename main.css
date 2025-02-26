@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+nav {
+    width: 100%;
+    height: 12vh;
+    display: grid;
+    grid-template-columns: 30% 50%;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 10px gray;
+}
+.nav_left {
+    width: 100%;
+}
+.nav_left img {
+    width: 15%;
+    filter: drop-shadow(5px 5px 10px gray);
+}
+.nav_right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_right a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 110%;
+    color: gray;
+}
+
+/* --------------------------home-------------------------- */
+
+#home {
+    width: 100%;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: 45% 40%;
+    grid-template-rows: 80%;
+    place-content: center;
+    gap: 5vw;
+}
+.home_left {
+    width: 100%;
+    display: grid;
+    gap: 5vh;
+    place-content: center;
+}
+.home_left h1 {
+    font-size: 260%;
+}
+.home_left span {
+    display: grid;
+    gap: 3vh;
+}
+.home_left span p {
+    line-height: 1.5;
+    font-size: 110%;
+}
+#home_left_btn {
+    justify-self: left;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+#home_left_btn i {
+    font-size: 120%;
+}
+
+.home_right {
+    width: 100%;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 80%;
+}
+.home_right form {
+    padding: 5vh 0;
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 5px 5px 10px gray;
+    display: grid;
+    grid-template-columns: 85%;
+    gap: 3vh;
+    place-content: center;
+    text-align: center;
+    border-radius: 20px;
+}
+.home_right form div {
+    display: grid;
+    gap: 2vh;
+}
+.home_right form div input {
+    height: 5vh;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+}
+.home_right form div a {
+    font-size: 110%;
+    text-align: end;
+}
+#login_btn {
+    height: 6vh;
+    font-size: 110%;
+    border: none;
+    background-color: crimson;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}

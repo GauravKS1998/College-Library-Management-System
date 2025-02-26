@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    height: 12vh;
+    display: grid;
+    grid-template-columns: 20% 50% 20%;
+    justify-content: space-around;
+    align-content: center;
+    box-shadow: 5px 5px 10px gray;
+}
+nav div {
+    display: grid;
+}
+nav img {
+    width: 25%;
+    justify-self: center;
+    filter: drop-shadow(5px 5px 10px gray);
+}
+nav button {
+    place-self: center;
+    padding: 12px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 120%;
+    border: none;
+    color: white;
+    background-color: crimson;
+    border-radius: 10px;
+}
+
+main {
+    width: 100%;
+    height: 88vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+}
+.sidebar {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 80%;
+    place-content: center;
+    border-right: 5px solid gray;
+    gap: 4vh;
+}
+.sidebar span {
+    width: 100%;
+    height: 5vh;
+    background-color: crimson;
+    clip-path: polygon(
+        0 20%,
+        80% 20%,
+        70% 0,
+        100% 50%,
+        70% 100%,
+        80% 80%,
+        0 80%
+    );
+}
+.sidebar div {
+    width: 100%;
+    display: grid;
+    gap: 2vh;
+}
+.sidebar div h2,
+h3 {
+    font-size: 140%;
+}
+.sidebar ul {
+    display: grid;
+    gap: 2vh;
+    font-size: 110%;
+    position: relative;
+    left: 10%;
+}
+.sidebar h3 {
+    font-weight: 500;
+}
+
+.home {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 28%);
+    grid-template-rows: 1fr 1fr;
+    place-content: center;
+    gap: 5vh;
+    padding: 5vh 0;
+    box-sizing: border-box;
+}
+.select_tabs {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px gray;
+    place-items: center;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.select_tabs:hover {
+    transform: scale(1.05);
+}

@@ -106,17 +106,13 @@ issue_book_form.addEventListener("submit", (e) => {
             student_id: student_id_value,
             book_name: book_name_value,
             issue_date: issue_date,
+            issue_status: "Issued",
         };
 
         let issued_book = JSON.parse(localStorage.getItem("issuedBook")) || [];
 
-        if (issued_book.length == 0) {
-            issued_book.push(book_issued);
-            localStorage.setItem("issuedBook", JSON.stringify(issued_book));
-        } else if (issued_book.length > 0) {
-            issued_book.push(book_issued);
-            localStorage.setItem("issuedBook", JSON.stringify(issued_book));
-        }
+        issued_book.push(book_issued);
+        localStorage.setItem("issuedBook", JSON.stringify(issued_book));
     } else {
         alert("Invalid Input");
     }

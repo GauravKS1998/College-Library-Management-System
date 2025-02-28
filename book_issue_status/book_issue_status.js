@@ -9,6 +9,8 @@ backBtn.addEventListener("click", () => {
 
 window.addEventListener("load", (e) => {
     let issue_details = JSON.parse(localStorage.getItem("issuedBook")) || [];
+    let collected_books =
+        JSON.parse(localStorage.getItem("collectedBook")) || [];
 
     issue_details.forEach((a) => {
         let detailsDiv = document.createElement("div");
@@ -24,13 +26,24 @@ window.addEventListener("load", (e) => {
         issueDate.innerHTML = a.issue_date;
 
         let status = document.createElement("h3");
-        status.innerHTML = a.status;
+        status.innerHTML = a.issue_status;
 
-        if (a.status) {
-        }
-        a.status == "Issued"
-            ? (status.style.color = "red")
-            : (status.style.color = "green");
+        collected_books.find((book) => {
+            if (
+                book.student_id === a.student_id &&
+                book.book_name === a.book_name
+            ) {
+                a.issue_status = "Collected";
+                status.innerHTML = a.issue_status;
+                issue_details.push(a);
+            } else {
+                status.innerHTML = a.issue_status;
+            }
+        });
+
+        status.innerHTML == "Collected"
+            ? (status.style.color = "green")
+            : (status.style.color = "red");
 
         detailsDiv.appendChild(stdId);
         detailsDiv.appendChild(bookName);
